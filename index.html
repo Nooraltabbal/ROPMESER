@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>الخدمات</title>
+  <style>
+    body {
+      font-family: sans-serif;
+  text-align: center;
+  background: #1d245b;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* توسيط عمودي */
+  align-items: center;       /* توسيط أفقي */
+  padding: 50px;
+      
+      
+    }
+    .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;  /* حتى تتوسّط الأزرار ضمن العمود */
+}
+
+    .service-button {
+    
+      align-items: center;
+      
+ padding: 18px 32px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      padding: 20px 40px;
+      margin: 15px;
+      font-size: 20px;
+      width: 200px;
+      cursor: pointer;
+      
+       transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25)
+    }
+    
+
+    .service-button:hover {
+      transform: scale(1.05);
+    }
+     #popup-cen {
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+     #popup-cen video {
+        width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+     #popup-cen button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+       border: none;
+      cursor: pointer;
+    }
+     #popup-img {
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+     #popup-img image {
+        width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    #popup-img button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+       border: none;
+      cursor: pointer;
+    }
+    #popup-imgg {
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+ #popup-imgg image {
+        width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+     #popup-imgg button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+       border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <img src="images\New_LOGO_2024.png" alt="company logo" width="150"/>
+
+  <h1>Our Services</h1>
+<div class="button-container">
+<button class="service-button" onclick="location.href='wifi.html'"> <i class="fas fa-wifi" style="margin-right:8px ;"></i> WiFi </button>
+<button class="service-button" onclick="document.getElementById('popup-cen').style.display='flex'"><i class="fas fa-briefcase"></i> Bussniess center </button>
+<div id="popup-cen" onclick="this.style.display='none'">
+    <video controls autoplay onclick="event.stopPropagation()">
+      <source src="videos\businessCenter.MOV" type="video/mp4"></video>
+      <button onclick="document.getElementById('popup-cen').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+<button class="service-button" onclick="location.href='Confirmattendance.html'"> <i class="fas fa-circle-check"></i> Confirm attendance </button>
+<button class="service-button" onclick="location.href='PrayerRoom.html'"><i class="fas fa-hands-praying"></i> Prayer Room </button>
+
+
+  <button class="service-button" onclick="document.getElementById('popup-img').style.display='flex'"><i class="fas fa-triangle-exclamation"></i>Emergency</button>
+  <div id="popup-img" onclick="this.style.display='none'">
+    <img onclick="event.stopPropagation()"source src="images/emer.png" type="png" width="600" height="300">
+  
+    <button onclick="document.getElementById('popup-img').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+
+  <button class="service-button" onclick="document.getElementById('popup-imgg').style.display='flex'"><i class="fas fa-triangle-exclamation"></i>Agenda</button>
+  <div id="popup-imgg" onclick="this.style.display='none'">
+    <img onclick="event.stopPropagation()"source src="images/agenda.png" type="png" width="500" height="900">
+  
+    <button onclick="document.getElementById('popup-imgg').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+
+
+  <button class="service-button" onclick="location.href='RestRoom.html'"><i class="fas fa-restroom"></i>WashRoom</button>
+  
+</div>
+</body>
+</html>
